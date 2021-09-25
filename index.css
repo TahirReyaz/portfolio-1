@@ -5,8 +5,9 @@
     --tertiary: white;
     --quarternary: lawngreen;
     /* Font sizes */
-    --spotlight-heading: 4rem;
-    --sponsored-post-link: 3rem;
+    --salutation: 5rem;
+    --name: 6rem;
+    --heading: 5rem;
     /* Fonts */
     /* Other sizes */   
 }
@@ -17,7 +18,7 @@ body {
 }
 
 section {
-    padding: 10vh;
+    padding: 0 10vh;
 }
 
 /* Navbar */
@@ -25,6 +26,7 @@ section {
 nav {
     height: 12vh;
     padding: 15px;
+    position: fixed;
 }
 
 .nav-link {
@@ -35,15 +37,17 @@ nav {
 
 .landingSection {
     height: 85vh;
+    padding: 10vh;
+    margin-top: 12vh;
     background: linear-gradient(180deg, #BEE3DB 9.38%, rgba(255, 255, 255, 0) 100%);
 }
 
 .salutation {
-    font-size: 5rem;
+    font-size: var(--salutation);
 }
 
 .name {
-    font-size: 6rem;
+    font-size: var(--name);
     font-weight: 500;
 }
 
@@ -82,13 +86,29 @@ nav {
 
 .heading {
     font-weight: 200;
-    font-size: 5rem;
+    font-size: var(--heading);
     line-height: 94px;
     color: var(--secondary);
     text-shadow: 4px 4px 14px #14213D;
 }
 
+.aboutText {
+    padding: 20vh;
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 41px;
+}
+
 /* Education */
 /* Experience */
+
+.timeLine {
+    width: 42vw;
+}
+
 /* Skills */
-/* Qualities */
+/* Projects */
+
+.projectSection {
+    height: 88vh;
+}

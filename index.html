@@ -16,7 +16,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; top:0; width: 100%">
         <div class="container-fluid">
           <a class="navbar-brand" href="">Tahir</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,11 +68,19 @@
     <!-- About Me -->
     <section>
         <h1 class="heading" id="about">About me</h1>
+        <div class="aboutText">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas eget nunc massa justo. Pulvinar sit arcu massa, sit rhoncus. Tincidunt turpis placerat semper sapien pharetra nisl ut. Urna amet condimentum rhoncus tincidunt magnis amet porta nunc mi. Quis lorem imperdiet tempor magna turpis. Varius platea neque amet at. more        
+        </div>
     </section>
 
     <!-- Education -->
     <section>
         <h1 class="heading">Education</h1>
+        <div class="d-flex justify-content-center .mt-1">
+            <div class="timeLine">
+                Blah
+            </div>
+        </div>
     </section>
 
     <!-- Experience -->
@@ -85,8 +93,16 @@
         <h1 class="heading" id="skills">Skills</h1>
     </section>
     <!-- Projects -->
-    <section>
+    <section class="projectSection">
         <h1 class="heading">Projects</h1>
+        <div class="container projects">
+            <div class="row">
+                <div class="col-md-4 carousel"></div>
+                <div class="col-md-4 carousel"></div>
+                <div class="col-md-4 carousel"></div>
+                <div class="col-md-4 carousel"></div>
+            </div>
+        </div>
     </section>
     <script src="index.js"></script>
 </body>
