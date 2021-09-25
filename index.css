@@ -1,7 +1,7 @@
 :root {
     /* Colours */
     --primary: #05080F;
-    --secondary: floralwhite;
+    --secondary: #14213D;
     --tertiary: white;
     --quarternary: lawngreen;
     /* Font sizes */
@@ -16,11 +16,15 @@ body {
     padding: 0;
 }
 
+section {
+    padding: 10vh;
+}
+
 /* Navbar */
 
 nav {
-    height: 15vh;
-    padding: 30px;
+    height: 12vh;
+    padding: 15px;
 }
 
 .nav-link {
@@ -31,7 +35,7 @@ nav {
 
 .landingSection {
     height: 85vh;
-    padding: 10vh;
+    background: linear-gradient(180deg, #BEE3DB 9.38%, rgba(255, 255, 255, 0) 100%);
 }
 
 .salutation {
@@ -43,7 +47,47 @@ nav {
     font-weight: 500;
 }
 
+.socialIcons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.socialLink {
+    font-size: 3rem;
+    color: var(--secondary)
+}
+
+.resume {
+    padding: 22.4567px;
+    width: 287.45px;
+    height: 99.93px;
+    background: #BEE3DB;
+    border-radius: 15.7197px;
+    margin: 44.9135px 0px;
+
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 55px;
+    color: #656565;
+}
+
+.displayPic {
+    width: 35vw;
+    height: auto;
+    border: 13.8687px solid #BEE3DB;
+    border-radius: 100%;
+}
+
 /* About Me */
+
+.heading {
+    font-weight: 200;
+    font-size: 5rem;
+    line-height: 94px;
+    color: var(--secondary);
+    text-shadow: 4px 4px 14px #14213D;
+}
+
 /* Education */
 /* Experience */
 /* Skills */
