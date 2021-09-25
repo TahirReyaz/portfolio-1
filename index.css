@@ -2,7 +2,7 @@
     /* Colours */
     --primary: #05080F;
     --secondary: #14213D;
-    --tertiary: white;
+    --tertiary: #2EC4B6;
     --quarternary: lawngreen;
     /* Font sizes */
     --salutation: 5rem;
@@ -100,10 +100,43 @@ nav {
 }
 
 /* Education */
-/* Experience */
 
 .timeLine {
     width: 42vw;
+}
+
+/* Experience */
+
+.exp {
+    background-color: var(--tertiary);
+    width: 53vw;
+    height: 30vh;
+    margin: 10vh auto;
+    padding: 4vh 5vw;
+}
+
+.workLogo {
+    width: 10vw;
+    height: auto;
+}
+
+.workDesignation {
+    font-weight: 500;
+    font-size: 33.8346px;
+    line-height: 40px;
+}
+
+.workName {
+    font-weight: normal;
+    font-size: 33.8346px;
+    line-height: 40px;
+}
+
+.workPeriod {
+    font-weight: normal;
+    font-size: 28.1955px;
+    line-height: 33px;
+    color: #FFFFFF;
 }
 
 /* Skills */
