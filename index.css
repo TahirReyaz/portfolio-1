@@ -1,0 +1,50 @@
+:root {
+    /* Colours */
+    --primary: #05080F;
+    --secondary: floralwhite;
+    --tertiary: white;
+    --quarternary: lawngreen;
+    /* Font sizes */
+    --spotlight-heading: 4rem;
+    --sponsored-post-link: 3rem;
+    /* Fonts */
+    /* Other sizes */   
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+
+nav {
+    height: 15vh;
+    padding: 30px;
+}
+
+.nav-link {
+    font-size: 1.5rem;
+}
+
+/* Landing section */
+
+.landingSection {
+    height: 85vh;
+    padding: 10vh;
+}
+
+.salutation {
+    font-size: 5rem;
+}
+
+.name {
+    font-size: 6rem;
+    font-weight: 500;
+}
+
+/* About Me */
+/* Education */
+/* Experience */
+/* Skills */
+/* Qualities */
