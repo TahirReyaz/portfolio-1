@@ -3,7 +3,7 @@
     --primary: #05080F;
     --secondary: #14213D;
     --tertiary: #2EC4B6;
-    --quarternary: lawngreen;
+    --quarternary: #C6E0E6;
     /* Font sizes */
     --salutation: 4rem;
     --name: 5rem;
@@ -27,6 +27,7 @@ nav {
     height: 12vh;
     padding: 15px;
     position: fixed;
+    background-color: var(--quarternary);
 }
 
 .nav-link {
