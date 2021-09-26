@@ -5,8 +5,8 @@
     --tertiary: #2EC4B6;
     --quarternary: lawngreen;
     /* Font sizes */
-    --salutation: 5rem;
-    --name: 6rem;
+    --salutation: 4rem;
+    --name: 5rem;
     --heading: 5rem;
     /* Fonts */
     /* Other sizes */   
@@ -36,8 +36,8 @@ nav {
 /* Landing section */
 
 .landingSection {
-    height: 85vh;
-    padding: 10vh;
+    height: 88vh;
+    padding: 8vh 8vw;
     margin-top: 12vh;
     background: linear-gradient(180deg, #BEE3DB 9.38%, rgba(255, 255, 255, 0) 100%);
 }
@@ -62,16 +62,17 @@ nav {
 }
 
 .resume {
-    padding: 22.4567px;
-    width: 287.45px;
-    height: 99.93px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    height: 12vh;
     background: #BEE3DB;
     border-radius: 15.7197px;
     margin: 44.9135px 0px;
 
     font-weight: 500;
     font-size: 3rem;
-    line-height: 55px;
     color: #656565;
 }
 
@@ -85,6 +86,7 @@ nav {
 /* About Me */
 
 .heading {
+    margin-top: 2vh;
     font-weight: 200;
     font-size: var(--heading);
     line-height: 94px;
