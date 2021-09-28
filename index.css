@@ -76,6 +76,7 @@ nav {
     background: #BEE3DB;
     border-radius: 15.7197px;
     margin: 44.9135px 0px;
+    cursor: pointer;
 
     font-weight: 500;
     font-size: var(--resume);
