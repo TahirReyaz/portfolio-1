@@ -4,10 +4,17 @@
     --secondary: #14213D;
     --tertiary: #2EC4B6;
     --quarternary: #C6E0E6;
+    --another-blue: #BEE3DB;
     /* Font sizes */
     --salutation: 4rem;
     --name: 5rem;
     --heading: 5rem;
+    --aboutText: 3rem;
+    --resume: 3rem;
+    --eduTypenName: 1.5rem;
+    --eduDuration: 1.5rem;
+    --designation: 2rem;
+    --period: 1.8rem;
     /* Fonts */
     /* Other sizes */   
 }
@@ -27,7 +34,7 @@ nav {
     height: 12vh;
     padding: 15px;
     position: fixed;
-    background-color: var(--quarternary);
+    background-color: var(--another-blue);
 }
 
 .nav-link {
@@ -40,7 +47,7 @@ nav {
     height: 88vh;
     padding: 8vh 8vw;
     margin-top: 12vh;
-    background: linear-gradient(180deg, #BEE3DB 9.38%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(180deg, var(--another-blue) 9.38%, rgba(255, 255, 255, 0) 100%);
 }
 
 .salutation {
@@ -73,7 +80,7 @@ nav {
     margin: 44.9135px 0px;
 
     font-weight: 500;
-    font-size: 3rem;
+    font-size: var(--resume);
     color: #656565;
 }
 
@@ -98,8 +105,8 @@ nav {
 .aboutText {
     padding: 20vh;
     font-weight: 300;
-    font-size: 35px;
-    line-height: 41px;
+    font-size: var(--aboutText);
+    line-height: var(--aboutText);
 }
 
 /* Education */
@@ -126,8 +133,8 @@ nav {
     height: 7vh;
     background: var(--tertiary);
     border-radius: 5px;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
+    font-size: var(--eduDuration);
+    line-height: var(--eduDuration);
 }
 
 .line {
@@ -143,8 +150,8 @@ nav {
     font-weight: 500;
 }
 .eduType, .eduName {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
+    font-size: var(--eduTypenName);
+    line-height: var(--eduTypenName);
     margin-bottom: 1vh;
     color: #000000;
 }
@@ -170,20 +177,20 @@ nav {
 
 .workDesignation {
     font-weight: 500;
-    font-size: 33.8346px;
+    font-size: var(--designation);
     line-height: 40px;
 }
 
 .workName {
     font-weight: normal;
-    font-size: 33.8346px;
-    line-height: 40px;
+    font-size: var(--designation);
+    line-height: var(--designation);
 }
 
 .workPeriod {
     font-weight: normal;
-    font-size: 28.1955px;
-    line-height: 33px;
+    font-size: var(--period);
+    line-height: var(--period);
     color: #FFFFFF;
 }
 
@@ -192,4 +199,48 @@ nav {
 
 .projectSection {
     height: 88vh;
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        /* Font sizes */
+        --salutation: 2rem;
+        --name: 3rem;
+        --heading: 4rem;
+        --aboutText: 1.5rem;
+        --resume: 2rem;
+        --eduTypenName: 1.3rem;
+        --eduDuration: 1.3rem;
+        --designation: 1.5rem;
+        --period: 1rem; 
+        /* Fonts */
+        /* Other sizes */   
+    }    
+    section {
+        padding: 1vw;
+    }
+    .resume {
+        width: 40vw;
+    }
+    .aboutText {
+        padding: 0;
+    }
+    .timeLine {
+        width: 98vw;
+    }
+    .eduDuration {
+        width: 20vw;
+        height: 10vh;
+    }
+    .line {
+        left: 10vw;
+        top: 9vh;
+        height: 60%;
+    }
+    .exp {
+        width: 95vw;
+    }
+    .workLogo {
+        width: 100%;
+    }
 }
