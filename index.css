@@ -32,8 +32,6 @@ section {
 
 nav {
     height: 12vh;
-    padding: 15px;
-    position: fixed;
     background-color: var(--another-blue);
 }
 
@@ -216,8 +214,14 @@ nav {
         /* Fonts */
         /* Other sizes */   
     }    
+    nav {
+        height: unset;
+    }
     section {
         padding: 1vw;
+    }
+    .landingSection {
+        margin-top: 9vh;
     }
     .resume {
         width: 40vw;
