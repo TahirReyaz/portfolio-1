@@ -1,38 +1,43 @@
 :root {
     /* Colours */
-    --primary: #05080F;
-    --secondary: #14213D;
+    --background: #FFFCEC;
+    --primary: #4F5D75;
+    --secondary: #2D3142;
     --tertiary: #2EC4B6;
     --quarternary: #C6E0E6;
     --another-blue: #BEE3DB;
+
     /* Font sizes */
     --salutation: 4rem;
     --name: 5rem;
     --heading: 5rem;
     --aboutText: 3rem;
-    --resume: 3rem;
+    --resume: 2rem;
     --eduTypenName: 1.5rem;
     --eduDuration: 1.5rem;
     --designation: 2rem;
     --period: 1.8rem;
+
     /* Fonts */
-    /* Other sizes */   
+    /* Other sizes */  
 }
 
 body {
     margin: 0;
     padding: 0;
+    background-color: var(--background);
 }
 
 section {
-    padding: 0 10vh;
+    padding: 2vh 7vw;
+    height: 88vh;
 }
 
 /* Navbar */
 
 nav {
     height: 12vh;
-    background-color: var(--another-blue);
+    background-color: var(--background);
 }
 
 .nav-link {
@@ -42,10 +47,8 @@ nav {
 /* Landing section */
 
 .landingSection {
-    height: 88vh;
     padding: 8vh 8vw;
     margin-top: 12vh;
-    background: linear-gradient(180deg, var(--another-blue) 9.38%, rgba(255, 255, 255, 0) 100%);
 }
 
 .salutation {
@@ -73,14 +76,13 @@ nav {
     align-items: center;
     width: 15vw;
     height: 12vh;
-    background: #BEE3DB;
+    background: var(--primary);
     border-radius: 15.7197px;
     margin: 44.9135px 0px;
     cursor: pointer;
 
-    font-weight: 500;
     font-size: var(--resume);
-    color: #656565;
+    color: white;
 }
 
 .displayPic {
@@ -93,12 +95,14 @@ nav {
 /* About Me */
 
 .heading {
-    margin-top: 2vh;
-    font-weight: 200;
-    font-size: var(--heading);
-    line-height: 94px;
-    color: var(--secondary);
-    text-shadow: 4px 4px 14px #14213D;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 50px;
+    letter-spacing: 0.12em;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--secondary);
 }
 
 .aboutText {
@@ -130,7 +134,7 @@ nav {
     padding: 10px;
     width: 10vw;
     height: 7vh;
-    background: var(--tertiary);
+    background: var(--primary);
     border-radius: 5px;
     font-size: var(--eduDuration);
     line-height: var(--eduDuration);
@@ -161,8 +165,12 @@ nav {
 
 /* Experience */
 
+.expSection {
+    height: unset;
+}
+
 .exp {
-    background-color: var(--tertiary);
+    background-color: var(--primary);
     width: 53vw;
     height: 30vh;
     margin: 10vh auto;
@@ -194,10 +202,81 @@ nav {
 }
 
 /* Skills */
+
+.skillSection {
+    height: unset;
+}
+
+.using, .learning, .others {
+    margin-bottom: 5vh;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.skillType {
+    height: 100%;
+    width: 3vw;
+}
+.skillType p {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--primary);
+    transform: rotate(-90deg);
+}
+
+.skillRow {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.skillContainer {
+    height: 20vh;
+    width: 10vw;
+    padding: 2vh;
+    margin: 0 2vw 0;
+    text-align: center;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 18px rgba(79, 93, 117, 0.35);
+    border-radius: 5px;
+    margin-bottom: 2vh;
+}
+.skillContainer:hover {
+    box-shadow: 7px 7px 26px rgba(239, 131, 84, 0.5);
+}
+
+.skillName {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #000000;
+}
+
+.skillIcon {
+    max-height: 80%;
+    max-width: 100%;
+}
+
 /* Projects */
 
-.projectSection {
-    height: 88vh;
+/* Contact Section */
+
+.contactContent {
+    /* margin: 5vh auto; */
+    width: 70vh;
+}
+
+.contactSalutation {
+    color: var(--primary);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.contactMsg {
+    font-size: 1.5rem;
+    color: #898A8A;
+    text-align: center;
 }
 
 @media screen and (max-width: 768px) {
