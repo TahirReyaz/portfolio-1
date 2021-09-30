@@ -14,16 +14,20 @@
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;600;900&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 
     <title>Tahir Reyaz</title>
     <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <nav class="navbar fixed-top navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="">Tahir</a>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>          
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -37,10 +41,10 @@
               <a class="nav-link" href="#skills">Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact me</a>
+              <a class="nav-link" href="https://tahirreyaz.github.io/Resume/" target="_blank">Resume</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://tahirreyaz.github.io/Resume/" target="_blank">Resume</a>
+              <a class="nav-link resume" href="#contact">Contact</a>
             </li>
           </ul>  
         </div>  
@@ -54,9 +58,17 @@
                 <!-- text and links -->
                 <div class="col-md-6">
                     <div class="salutation">Hi. I am</div>
-                    <!-- <div class="salutation">I am</div> -->
                     <div class="name">Tahir Reyaz</div>
-                    <div class="resume" onclick="window.open('https://tahirreyaz.github.io/Resume/', '_blank')">Resume</div>
+                    <div class="occupation">Full Stack Web Developer</div>
+                    <div class="landingText">
+                        Hello visiter, This is my portfolio!<br>
+                        It has all my education history, my skills, the projects I have worked upon, my experieneces and voluteering details and much more...<br>
+                        Happy to have to here!
+                    </div>
+                    <div class="resume" onclick="window.open('https://tahirreyaz.github.io/Resume/', '_blank')">
+                        <i class="fas fa-download"></i>
+                        Resume
+                    </div>
                 </div>
                 <!-- image -->
                 <div class="col-md-5 ms-auto">
@@ -251,18 +263,44 @@
     <!-- Projects -->
     <section class="projectSection">
         <h1 class="heading">Projects</h1>
-        <div class="container projects">
-            <div class="row">
-                <div class="col-md-4 carousel"></div>
-                <div class="col-md-4 carousel"></div>
-                <div class="col-md-4 carousel"></div>
-                <div class="col-md-4 carousel"></div>
+        <div class="projCardContainer">
+            <div class="card projectCard p-0">
+                <img src="images/Projects/ChessByTahirV3.png" class="card-img-top projImg" alt="Chess" />
+                <div class="card-body">
+                    <h5 class="card-title">Blog Website</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="https://tahirreyaz.github.io/Chess-by-Tahir-v3/" class="card-link">Play</a>
+                </div>
+            </div>
+            <div class="card projectCard p-0">
+                <img src="images/Projects/ChessByTahirV3.png" class="card-img-top projImg" alt="..." />
+                <div class="card-body">
+                    <h5 class="card-title">Whatsapp bot</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="" class="card-link">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card projectCard p-0">
+                <img src="images/Projects/ChessByTahirV3.png" class="card-img-top projImg" alt="..." />
+                <div class="card-body">
+                    <h5 class="card-title">Chess</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="https://tahirreyaz.github.io/Chess-by-Tahir-v3/" class="card-link">Play</a>
+                </div>
+            </div>
+            <div class="card projectCard p-0">
+                <img src="images/Projects/ChessByTahirV3.png" class="card-img-top projImg" alt="..." />
+                <div class="card-body">
+                    <h5 class="card-title">Otrio by Tahir</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#\https://tahirreyaz.github.io/Otrio-by-Tahir-original-version/" class="card-link">Play</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact me -->
-    <section class="contactSection">
+    <section class="contactSection" id="contact">
         <h1 class="heading">Contact me</h1>
         <div class="contactContent">
             <h1 class="contactSalutation">Yayy! Let's talk</h1>

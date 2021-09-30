@@ -3,16 +3,16 @@
     --background: #FFFCEC;
     --primary: #4F5D75;
     --secondary: #2D3142;
-    --tertiary: #2EC4B6;
+    --tertiary: #EF8354;
     --quarternary: #C6E0E6;
     --another-blue: #BEE3DB;
 
     /* Font sizes */
-    --salutation: 4rem;
-    --name: 5rem;
+    --salutation: 3.5rem;
+    --name: 4.5rem;
     --heading: 5rem;
     --aboutText: 3rem;
-    --resume: 2rem;
+    --resume: 1.2rem;
     --eduTypenName: 1.5rem;
     --eduDuration: 1.5rem;
     --designation: 2rem;
@@ -20,6 +20,7 @@
 
     /* Fonts */
     /* Other sizes */  
+    --sliderWidth: 26px;
 }
 
 body {
@@ -33,57 +34,6 @@ section {
     height: 88vh;
 }
 
-/* Navbar */
-
-nav {
-    height: 12vh;
-    background-color: var(--background);
-}
-
-.nav-link {
-    font-size: 1.5rem;
-}
-
-/* Landing section */
-
-.landingSection {
-    padding: 8vh 8vw;
-    margin-top: 12vh;
-}
-
-.salutation {
-    font-size: var(--salutation);
-}
-
-.name {
-    font-size: var(--name);
-    font-weight: 500;
-}
-
-.resume {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 15vw;
-    height: 12vh;
-    background: var(--primary);
-    border-radius: 15.7197px;
-    margin: 44.9135px 0px;
-    cursor: pointer;
-
-    font-size: var(--resume);
-    color: white;
-}
-
-.displayPic {
-    width: 35vw;
-    height: auto;
-    border: 13.8687px solid #BEE3DB;
-    border-radius: 100%;
-}
-
-/* About Me */
-
 .heading {
     font-family: Spartan;
     font-style: normal;
@@ -95,11 +45,149 @@ nav {
     -webkit-text-stroke-color: var(--secondary);
 }
 
-.aboutText {
-    padding: 20vh;
-    font-weight: 300;
-    font-size: var(--aboutText);
-    line-height: var(--aboutText);
+/* Navbar */
+
+nav {
+    background-color: var(--background);
+    padding: 2vh 8vw;
+    color: var(--primary) !important;
+}
+
+.navbar-brand {
+    font-family: UnifrakturCook;
+    font-size: 2rem;
+    color: var(--primary) !important;
+}
+
+.nav-link {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+/* Dark mode switch */
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 2rem;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4F5D75;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: var(--sliderWidth);
+    width: var(--sliderWidth);
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    background-image: url('images/icons/carbon_light.svg');
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  /* input:checked + .slider {
+    background-image: url('images/icons/bi_moon-stars.svg');
+  } */
+/*   
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  } */
+  
+  input:checked + .slider:before {
+    background-color: #2D3142;
+    background-image: url('images/icons/bi_moon-stars.svg');
+    background-size: 70%;
+    -webkit-transform: translateX(var(--sliderWidth));
+    -ms-transform: translateX(var(--sliderWidth));
+    transform: translateX(var(--sliderWidth));
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+/* Landing section */
+
+.landingSection {
+    padding: 8vh 8vw;
+    margin-top: 12vh;
+    font-family: Spartan;
+}
+
+.salutation {
+    font-size: var(--salutation);
+    /* line-height: var(--salutation); */
+}
+
+.name {
+    font-size: var(--name);
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.occupation {
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--tertiary);
+}
+
+.landingText {
+    font-size: 1.2rem;
+}
+
+.resume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin-top: 2vh;
+    padding: 1vh 1vw;
+    background: var(--primary);
+    border-radius: 6px;
+    cursor: pointer;
+
+    font-size: var(--resume);
+    color: white;
+}
+.resume i {
+    margin-right: 1vw;
+}
+
+.displayPic {
+    height: 100%;
+    width: auto;
+    border: 13.8687px solid var(--tertiary);
+    border-radius: 100%;
 }
 
 /* Education */
@@ -251,6 +339,25 @@ nav {
 
 /* Projects */
 
+.projCardContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10vh 0;
+}
+
+.projectCard {
+    width: 20vw;
+    border: 1px solid #4F5D75;
+    box-sizing: border-box;
+    border-radius: calc(.25rem - 1px);
+}
+.projectCard:hover {
+    color: white;
+    background: #4F5D75;
+    box-shadow: 7px 7px 26px rgba(239, 131, 84, 0.5);
+    border-radius: calc(.25rem - 1px);
+}
+
 /* Contact Section */
 
 .contactContent {
@@ -283,6 +390,7 @@ nav {
 .contactCard {
     display: flex;
     align-items: center;
+    margin: 2vh;
     justify-content: space-between;
     background: #4F5D75;
     color: white;
@@ -292,7 +400,7 @@ nav {
     border-radius: 7px;
 }
 
-i {
+.contactCard i {
     margin-right: 1vw;
     font-size: 3rem;
 }
