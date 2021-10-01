@@ -3,12 +3,11 @@
     --background: #FFFCEC;
     --primary: #4F5D75;
     --secondary: #000000;
+    --darkShadow: 0, 0, 0;
     --grey: #4F5D75;
     --tertiary: #FFFFFF;
     --orange: #EF8354;
-
-
-
+    --orangeShadow: 239, 131, 84;
 
     /* Font sizes */
     --salutation: 3.5rem;
@@ -46,6 +45,9 @@ section {
     color: transparent;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: var(--primary);
+}
+.heading:hover {
+    color: var(--primary);
 }
 
 /* Navbar */
@@ -317,6 +319,9 @@ nav {
     font-size: 1.7rem;
     color: var(--primary);
 }
+.skillType p:hover {
+    color: var(--orange);
+}
 
 .skillRow {
     display: flex;
@@ -332,12 +337,13 @@ nav {
     margin: 0 2vw 0;
     text-align: center;
     background: var(--tertiary);
-    box-shadow: 4px 4px 18px var(--secondary);
+    box-shadow: 4px 4px 18px rgba(var(--darkShadow), 0.35);
+    
     border-radius: 5px;
     margin-bottom: 2vh;
 }
 .skillContainer:hover {
-    box-shadow: 7px 7px 26px var(--orange);
+    box-shadow: 7px 7px 26px rgba(var(--orangeShadow), 0.5);
 }
 
 .skillName {
@@ -371,7 +377,7 @@ nav {
 .projectCard:hover {
     color: white;
     background: var(--grey);
-    box-shadow: 7px 7px 26px var(--orange);
+    box-shadow: 7px 7px 26px rgba(var(--orangeShadow), 0.5);
     border-radius: calc(.25rem - 1px);
     transform: scale(1.3);
     z-index: 10;
@@ -433,6 +439,11 @@ nav {
     font-size: 2rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 7px;
+    transition: transform .2s;
+}
+.contactCard:hover {
+    transform: scale(1.3);
+    z-index: 10;
 }
 
 .contactCard i {

@@ -1,4 +1,4 @@
-// function changeMode(){
+// Dark/ light mode toggling
 
 const lightMode = {
     "--background": "#FFFCEC",
@@ -21,10 +21,11 @@ $('#colorMode').change(() => {
     }
 });
 
+// Scrolling through navbar links
 $("#navbar a").click(function(event) {
     event.preventDefault();
-
+    const target = event.target.getAttribute("href");
     $('html, body').animate({
-        scrollTop: $("#skills").offset().top
-    }, 600);
+        scrollTop: $(target).offset().top
+    }, 400);
 });
