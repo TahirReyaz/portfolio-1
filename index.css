@@ -179,11 +179,23 @@ nav {
     margin-right: 1vw;
 }
 
+.dpContainer {
+    position: relative;
+}
+
+.frame {
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+}
+
 .displayPic {
-    height: 100%;
+    position: absolute;
+    height: 95%;
     width: auto;
-    border: 13.8687px solid var(--orange);
-    border-radius: 100%;
+    z-index: 1;
 }
 
 /* Education */
@@ -361,7 +373,7 @@ nav {
     background: var(--grey);
     box-shadow: 7px 7px 26px var(--orange);
     border-radius: calc(.25rem - 1px);
-    transform: scale(1.5);
+    transform: scale(1.2);
     z-index: 1;
 }
 

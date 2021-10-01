@@ -20,3 +20,11 @@ $('#colorMode').change(() => {
         $(':root').css(lightMode);
     }
 });
+
+$("#navbar a").click(function(event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $("#skills").offset().top
+    }, 600);
+});
