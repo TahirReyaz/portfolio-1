@@ -11,14 +11,17 @@
 
     /* Font sizes */
     --salutation: 3.5rem;
-    --name: 4.5rem;
-    --heading: 5rem;
-    --aboutText: 3rem;
+    --name: 4rem;
+    --occupation: 2rem;
+    --landingText: 1.2rem;
+    --heading: 3rem;
     --resume: 1.2rem;
     --eduTypenName: 1.5rem;
     --eduDuration: 1.5rem;
     --designation: 2rem;
     --period: 1.8rem;
+    --contactSalutation: 2.5rem;
+    --contactMsg: 2rem;
 
     /* Fonts */
     /* Other sizes */  
@@ -40,7 +43,7 @@ section {
     font-family: Spartan;
     font-style: normal;
     font-weight: 900;
-    font-size: 50px;
+    font-size: var(--heading);
     letter-spacing: 0.12em;
     color: transparent;
     -webkit-text-stroke-width: 2px;
@@ -69,7 +72,7 @@ nav {
     color: var(--primary);
 }
 
-/* Dark mode switch */
+/***************************************** Dark mode switch **************************/
 
 /* The switch - the box around the slider */
 .switch {
@@ -133,7 +136,7 @@ nav {
     border-radius: 50%;
   }
 
-/* Landing section */
+/************************************ Landing section **************************************/
 
 .landingSection {
     padding: 8vh 8vw;
@@ -154,12 +157,12 @@ nav {
 
 .occupation {
     font-weight: 400;
-    font-size: 2rem;
+    font-size: var(--occupation);
     color: var(--orange);
 }
 
 .landingText {
-    font-size: 1.2rem;
+    font-size: var(--landingText);
     color: var(--secondary);
 }
 
@@ -181,26 +184,12 @@ nav {
     margin-right: 1vw;
 }
 
-.dpContainer {
-    position: relative;
-}
-
-.frame {
-    position: absolute;
-    bottom: 0;
-    margin: auto;
-    width: 80%;
-    height: 80%;
-}
-
 .displayPic {
-    position: absolute;
     height: 95%;
     width: auto;
-    z-index: 1;
 }
 
-/* Education */
+/********************************************** Education ********************************/
 
 .timeLine {
     width: 42vw;
@@ -258,7 +247,7 @@ nav {
     color: #656565;
 }
 
-/* Experience */
+/****************************************** Experience ***************************************/
 
 .expSection {
     height: unset;
@@ -296,7 +285,7 @@ nav {
     line-height: var(--period);
 }
 
-/* Skills */
+/********************************************** Skills **************************************/
 
 .skillSection {
     height: unset;
@@ -358,7 +347,7 @@ nav {
     max-width: 100%;
 }
 
-/* Projects */
+/************************************************ Projects ***********************************/
 
 .projCardContainer {
     display: flex;
@@ -378,7 +367,6 @@ nav {
     color: white;
     background: var(--grey);
     box-shadow: 7px 7px 26px rgba(var(--orangeShadow), 0.5);
-    border-radius: calc(.25rem - 1px);
     transform: scale(1.3);
     z-index: 10;
 }
@@ -399,7 +387,7 @@ nav {
     color: var(--secondary);
 }
 
-/* Contact Section */
+/******************************************** Contact Section ********************************/
 
 .contactContent {
     margin: 5vh auto;
@@ -408,12 +396,12 @@ nav {
 
 .contactSalutation {
     color: var(--grey);
-    font-size: 2.5rem;
+    font-size: var(--contactSalutation);
     text-align: center;
 }
 
 .contactMsg {
-    font-size: 2rem;
+    font-size: var(--contactMsg);
     color: #898A8A;
     text-align: center;
 }
@@ -451,36 +439,44 @@ nav {
     font-size: 3rem;
 }
 
+/********************************************* Media query ************************************/
 @media screen and (max-width: 768px) {
     :root {
         /* Font sizes */
         --salutation: 2rem;
-        --name: 3rem;
-        --heading: 4rem;
-        --aboutText: 1.5rem;
-        --resume: 2rem;
+        --name: 2rem;
+        --heading: 2rem;
+        --occupation: 1.2rem;
+        --landingText: .7rem;
+        --resume: 1rem;
         --eduTypenName: 1.3rem;
         --eduDuration: 1.3rem;
         --designation: 1.5rem;
         --period: 1rem; 
+        --contactSalutation: 2rem;
+        --contactMsg: 1rem;
         /* Fonts */
         /* Other sizes */   
     }    
-    nav {
-        height: unset;
-    }
     section {
         padding: 1vw;
     }
+    /* Landing Section */
     .landingSection {
         margin-top: 9vh;
     }
+    .landingContent {
+        flex-direction: column-reverse;
+    }
+    .displayPic {
+        width: 50%;
+        height: auto;
+        margin-left: 25%; /* half of the 100% width of pic */
+    }
     .resume {
-        width: 40vw;
+        padding: 1vh 2vw;
     }
-    .aboutText {
-        padding: 0;
-    }
+    /* Education */
     .timeLine {
         width: 98vw;
     }
@@ -493,10 +489,31 @@ nav {
         top: 9vh;
         height: 60%;
     }
+    /* Experience */
     .exp {
         width: 95vw;
     }
     .workLogo {
         width: 100%;
     }
+    /* Projects */
+    .projectSection {
+        height: unset;
+    }
+    .projectCard {
+        width: 95vw;
+        margin: 1vh auto;
+    }
+    .projectCard:hover {
+        color: unset;
+        background: var(--tertiary);
+        box-shadow: 0;
+        transform: scale(1);
+        z-index: 10;
+    }
+    /* Contact me */
+    .contactContent {
+        margin: 5vh;
+        width: unset;
+    }    
 }

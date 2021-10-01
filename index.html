@@ -21,19 +21,20 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg" id="navbar">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light" id="navbar">
         <div class="container-fluid">
           <a class="navbar-brand" href="#home">Tahir</a>
           <!-- Dark mode switch -->
           <label class="switch">
             <input type="checkbox" id="colorMode">
             <span class="slider round"></span>
-          </label>          
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false">
+          </label>
+          <!-- Mobile version toggler -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          
-          <div class="collapse navbar-collapse" id="navbar">
+          <!-- Links -->
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link" href="#skills">Skills</a>
@@ -45,7 +46,7 @@
               <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link resume" href="#contact">Contact me</a>
+              <a class="resume" href="#contact">Contact me</a>
             </li>
           </ul>  
         </div>  
@@ -55,11 +56,11 @@
     <!-- Landing section -->
     <section class="landingSection" id="home">
         <div class="container-fluid">
-            <div class="row">
+            <div class="landingContent row">
                 <!-- text and links -->
                 <div class="col-md-6">
-                    <div class="salutation">Hi. I am</div>
-                    <div class="name">Tahir Reyaz</div>
+                    <div class="salutation">Hi!</div>
+                    <div class="name">I'm Tahir Reyaz</div>
                     <div class="occupation">Full Stack Web Developer</div>
                     <div class="landingText">
                         Hello visiter, This is my portfolio!<br>
@@ -72,9 +73,8 @@
                     </div>
                 </div>
                 <!-- image -->
-                <div class="col-md-5 ms-auto dpContainer">
-                    <img class="displayPic" src="images/TahirWithoutBg.png" alt="Tahir">
-                    <img class="frame" src="images/frame.svg" alt="Tahir">
+                <div class="col-md-5 ms-auto">
+                    <img class="displayPic" src="images/Tahir.png" alt="Tahir">
                 </div>
             </div>
         </div>
@@ -255,9 +255,11 @@
     </section>
     
     <!-- Projects -->
-    <section class="projectSection" id="projects">
-        <h1 class="heading">Projects</h1>
-        <div class="projCardContainer">
+    <section class="projectSection container p-0" id="projects">
+        <div class="row p-0 m-0">
+            <h1 class="heading">Projects</h1>
+        </div>
+        <div class="row projCardContainer">
             <!-- Blog website -->
             <div class="card projectCard p-0">
                 <!-- Carousel -->
