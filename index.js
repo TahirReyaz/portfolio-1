@@ -4,15 +4,13 @@ const lightMode = {
     "--background": "#FFFCEC",
     "--primary": "#4F5D75",
     "--secondary": "#2D3142",
-    "--tertiary": "#EF8354",
-    "--basicFontColor": "#000000"
+    "--tertiary": "#FFFFFF"
 }
 const darkMode = {
     "--background": "#2D3142",
-    "--primary": "#FFFCEC",
-    "--secondary": "#FFFCEC",
-    "--tertiary": "#EF8354",
-    "--basicFontColor": "#FFFFFF"
+    "--primary": "#FFFFFF",
+    "--secondary": "#FFFFFF",
+    "--tertiary": "#2D3142"
 }
 
 $('#colorMode').change(() => {

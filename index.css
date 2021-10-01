@@ -2,9 +2,13 @@
     /* Colours */
     --background: #FFFCEC;
     --primary: #4F5D75;
-    --secondary: #2D3142;
-    --tertiary: #EF8354;
-    --basicFontColor: #000000;
+    --secondary: #000000;
+    --grey: #4F5D75;
+    --tertiary: #FFFFFF;
+    --orange: #EF8354;
+
+
+
 
     /* Font sizes */
     --salutation: 3.5rem;
@@ -41,7 +45,7 @@ section {
     letter-spacing: 0.12em;
     color: transparent;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: var(--secondary);
+    -webkit-text-stroke-color: var(--primary);
 }
 
 /* Navbar */
@@ -88,7 +92,7 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #4F5D75;
+    background-color: var(--grey);
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -137,24 +141,24 @@ nav {
 
 .salutation {
     font-size: var(--salutation);
-    color: var(--basicFontColor);
+    color: var(--secondary);
 }
 
 .name {
     font-size: var(--name);
     font-weight: 600;
-    color: var(--primary);
+    color: var(--grey);
 }
 
 .occupation {
     font-weight: 400;
     font-size: 2rem;
-    color: var(--tertiary);
+    color: var(--orange);
 }
 
 .landingText {
     font-size: 1.2rem;
-    color: var(--basicFontColor);
+    color: var(--secondary);
 }
 
 .resume {
@@ -164,7 +168,7 @@ nav {
     width: fit-content;
     margin-top: 2vh;
     padding: 1vh 1vw;
-    background: var(--primary);
+    background: var(--grey);
     border-radius: 6px;
     cursor: pointer;
 
@@ -178,7 +182,7 @@ nav {
 .displayPic {
     height: 100%;
     width: auto;
-    border: 13.8687px solid var(--tertiary);
+    border: 13.8687px solid var(--orange);
     border-radius: 100%;
 }
 
@@ -204,7 +208,7 @@ nav {
     padding: 10px;
     width: 10vw;
     height: 7vh;
-    background: var(--primary);
+    background: var(--grey);
     border-radius: 5px;
     font-size: var(--eduDuration);
     line-height: var(--eduDuration);
@@ -222,13 +226,18 @@ nav {
 
 .eduType {
     font-weight: 500;
-    color: var(--tertiary);
+    color: var(--orange);
 }
 .eduType, .eduName {
     font-size: var(--eduTypenName);
     line-height: var(--eduTypenName);
     margin-bottom: 1vh;
-    color: #000000;
+}
+.eduName {
+    color: var(--secondary);
+}
+.eduType {
+    color: var(--orange);
 }
 .eduLocation {
     font-size: 1.2rem;
@@ -242,11 +251,12 @@ nav {
 }
 
 .exp {
-    background-color: var(--primary);
+    background-color: var(--grey);
     width: 53vw;
     height: 30vh;
     margin: 10vh auto;
     padding: 4vh 5vw;
+    color: white;
 }
 
 .workLogo {
@@ -270,7 +280,6 @@ nav {
     font-weight: normal;
     font-size: var(--period);
     line-height: var(--period);
-    color: #FFFFFF;
 }
 
 /* Skills */
@@ -310,20 +319,20 @@ nav {
     padding: 2vh;
     margin: 0 2vw 0;
     text-align: center;
-    background: #FFFFFF;
-    box-shadow: 4px 4px 18px rgba(79, 93, 117, 0.35);
+    background: var(--tertiary);
+    box-shadow: 4px 4px 18px var(--secondary);
     border-radius: 5px;
     margin-bottom: 2vh;
 }
 .skillContainer:hover {
-    box-shadow: 7px 7px 26px rgba(239, 131, 84, 0.5);
+    box-shadow: 7px 7px 26px var(--orange);
 }
 
 .skillName {
     font-style: normal;
     font-weight: 500;
     font-size: 1rem;
-    color: #000000;
+    color: var(--secondary);
 }
 
 .skillIcon {
@@ -341,16 +350,23 @@ nav {
 
 .projectCard {
     width: 20vw;
-    color: var(--basicFontColor);
     border: 1px solid #4F5D75;
     box-sizing: border-box;
     border-radius: calc(.25rem - 1px);
+    background-color: var(--tertiary);
 }
 .projectCard:hover {
     color: white;
-    background: #4F5D75;
-    box-shadow: 7px 7px 26px rgba(239, 131, 84, 0.5);
+    background: var(--grey);
+    box-shadow: 7px 7px 26px var(--orange);
     border-radius: calc(.25rem - 1px);
+}
+
+.card-title {
+    color: var(--primary);
+}
+.card-text {
+    color: var(--secondary);
 }
 
 /* Contact Section */
@@ -361,7 +377,7 @@ nav {
 }
 
 .contactSalutation {
-    color: var(--primary);
+    color: var(--grey);
     font-size: 2.5rem;
     text-align: center;
 }
@@ -387,7 +403,7 @@ nav {
     align-items: center;
     margin: 2vh;
     justify-content: space-between;
-    background: #4F5D75;
+    background: var(--grey);
     color: white;
     padding: 2vh 2vw;
     font-size: 2rem;
