@@ -69,7 +69,15 @@ nav {
 
 .nav-link {
     font-size: 1.5rem;
-    color: var(--primary);
+    color: var(--primary) !important;
+}
+
+.nav-item .resume {
+    margin-top: 1vh;
+    text-decoration: none;
+}
+.nav-item .resume:hover {
+    color: white;
 }
 
 /***************************************** Dark mode switch **************************/
