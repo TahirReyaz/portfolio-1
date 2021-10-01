@@ -354,12 +354,15 @@ nav {
     box-sizing: border-box;
     border-radius: calc(.25rem - 1px);
     background-color: var(--tertiary);
+    transition: transform .2s;
 }
 .projectCard:hover {
     color: white;
     background: var(--grey);
     box-shadow: 7px 7px 26px var(--orange);
     border-radius: calc(.25rem - 1px);
+    transform: scale(1.5);
+    z-index: 1;
 }
 
 .card-title {
