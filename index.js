@@ -29,3 +29,9 @@ $("#navbar a").click(function(event) {
         scrollTop: $(target).offset().top
     }, 400);
 });
+
+// Toggle dark/ light mode according to the current time
+var now = new Date();
+if(now.getHours() < 6 || now.getHours() >= 18) {
+    $('#colorMode').click();
+}
