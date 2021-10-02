@@ -18,10 +18,12 @@
     --resume: 1.2rem;
     --eduTypenName: 1.5rem;
     --eduDuration: 1.5rem;
+    --skillName: 1rem;
     --designation: 2rem;
     --period: 1.8rem;
     --contactSalutation: 2.5rem;
     --contactMsg: 2rem;
+    --contactMed: 2rem;
 
     /* Fonts */
     /* Other sizes */  
@@ -315,38 +317,44 @@ nav {
     font-weight: bold;
     font-size: 1.7rem;
     color: var(--primary);
+    margin: 0;
 }
 .skillType p:hover {
     color: var(--orange);
 }
 
+.skillList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
 .skillRow {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
+    margin-bottom: 2vh;
 }
 
-.skillContainer {
+.skillCard {
     height: 20vh;
     width: 10vw;
     padding: 2vh;
     margin: 0 2vw 0;
     text-align: center;
     background: var(--tertiary);
-    box-shadow: 4px 4px 18px rgba(var(--darkShadow), 0.35);
-    
+    box-shadow: 4px 4px 18px rgba(var(--darkShadow), 0.35);    
     border-radius: 5px;
-    margin-bottom: 2vh;
 }
-.skillContainer:hover {
+.skillCard:hover {
     box-shadow: 7px 7px 26px rgba(var(--orangeShadow), 0.5);
 }
 
 .skillName {
     font-style: normal;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: var(--skillName);
     color: var(--secondary);
 }
 
@@ -432,10 +440,11 @@ nav {
     background: var(--grey);
     color: white;
     padding: 2vh 2vw;
-    font-size: 2rem;
+    font-size: var(--contactMed);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 7px;
     transition: transform .2s;
+    cursor: pointer;
 }
 .contactCard:hover {
     transform: scale(1.3);
@@ -444,7 +453,7 @@ nav {
 
 .contactCard i {
     margin-right: 1vw;
-    font-size: 3rem;
+    font-size: calc(var(--contactMed) + 1rem);
 }
 
 /********************************************* Media query ************************************/
@@ -459,11 +468,12 @@ nav {
         --resume: 1rem;
         --eduTypenName: 1.3rem;
         --eduDuration: 1.3rem;
+        --skillName: 0.4rem;
         --designation: 1.5rem;
         --period: 1rem; 
         --contactSalutation: 2rem;
         --contactMsg: 1rem;
-        /* Fonts */
+        --contactMed: 1.2rem;
         /* Other sizes */   
     }    
     section {
@@ -484,6 +494,17 @@ nav {
     .resume {
         padding: 1vh 2vw;
     }
+    /* Skills */
+    .skillCard {
+        height: calc(80vw / 6);
+        width: calc(80vw / 6);
+        padding: .5vh;
+        margin: 0 .5vw 0;    
+    }
+    .skillIcon {
+        max-height: 70%;
+        max-width: 100%;
+    }    
     /* Education */
     .timeLine {
         width: 98vw;
@@ -524,4 +545,12 @@ nav {
         margin: 5vh;
         width: unset;
     }    
+    .contactMedRow {
+        flex-direction: column;
+    }
+    .contactCard {
+        justify-content: space-around;
+        margin: 1vh;
+        /* width: fit-content; */
+    }
 }
