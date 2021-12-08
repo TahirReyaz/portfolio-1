@@ -385,6 +385,9 @@ nav {
 }
 
 /************************************************ Projects ***********************************/
+.projectSection {
+    height: unset;
+}
 
 .projCardContainer {
     display: flex;
@@ -398,7 +401,22 @@ nav {
     box-sizing: border-box;
     border-radius: calc(.25rem - 1px);
     background-color: var(--tertiary);
-    transition: transform .2s;
+}
+.phone {
+    width: 26vw;
+}
+.phone .carousel {
+    transition: transform .5s;
+}
+.phone .carousel:hover {
+    transform: scale(1.7);
+    z-index: 1031 !important;
+    position: relative;
+    left: unset;
+    top: unset;
+    width: unset;
+    height: auto;
+    transition: transform 1s;
 }
 .projectCard:hover {
     color: white;
@@ -410,13 +428,15 @@ nav {
     color: white;
 }
 
+.carousel {
+    transition: position 1s, left 1s, top 1s, width 1s, height 1s;
+}
 .carousel:hover {
     position:fixed;
     top:20vh;
     left:15%;
     width: 60%;
     height: auto;
-    /* transition: width 1s, height 1s, left 1s, top 1s; */
 }
 
 .carousel-caption h5 {
