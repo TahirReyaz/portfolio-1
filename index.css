@@ -289,13 +289,14 @@ nav {
     width: 53vw;
     height: 30vh;
     margin: 10vh auto;
-    padding: 4vh 5vw;
+    padding: 4vh 2vw;
     color: white;
 }
 
 .workLogo {
     width: 10vw;
     height: auto;
+    border-radius: 100%;
 }
 
 .workDesignation {
@@ -405,6 +406,19 @@ nav {
 .phone {
     width: 26vw;
 }
+
+.carousel {
+    width: auto;
+    transition: width 1s, height 1s;
+}
+.carousel:hover {
+    position:fixed;
+    top:20vh;
+    left:15%;
+    width: 60%;
+    height: auto;
+}
+
 .phone .carousel {
     transition: transform .5s;
 }
@@ -426,17 +440,6 @@ nav {
 }
 .projectCard:hover .card-title {
     color: white;
-}
-
-.carousel {
-    transition: position 1s, left 1s, top 1s, width 1s, height 1s;
-}
-.carousel:hover {
-    position:fixed;
-    top:20vh;
-    left:15%;
-    width: 60%;
-    height: auto;
 }
 
 .carousel-caption h5 {
