@@ -345,6 +345,7 @@ input:checked + .slider:before {
 }
 .skillType p:hover {
   color: var(--orange);
+  cursor: default;
 }
 
 .skillList {
